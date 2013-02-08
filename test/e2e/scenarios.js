@@ -17,5 +17,12 @@ describe('todoApp', function () {
       expect(repeater('.items li').count()).toBe(1);
     });
 
+    it('should mark an item as completed-true when the user clicks its complete button', function () {
+      input('newText').enter('practice tdd');
+      element('.input-append button').click();
+      element('.items li input').click();
+      expect(element('.items li div').attr('class')).toBe('span6 completed-true');
+    });
+
   });
 });

@@ -7,9 +7,9 @@
 
   <!-- Add item form -->
   <div class="row-fluid">
-    <form>
+    <form name="addForm">
       <div id="add-input" class="input-append">
-        <input type="text" ng-model="newText" class="span8">
+        <input name="input" type="text" ng-model="newText" class="span8">
         <button ng-click="add()" class="btn btn-primary" type="button"><i class="icon-plus"></i></button>
       </div>
     </form>
@@ -20,27 +20,11 @@
     <ul class="items unstyled">
 
       <li ng-repeat="item in items" class="row-fluid">
-        <div class="span6">{{item.text}}</div>
-        <div class="offset6">
-          <button class="btn btn-mini btn-success" href="#"><i class="icon-ok"></i></button>
-        </div>
+      <div class="span6 completed-{{item.done}}">{{item.text}}</div>
+      <div class="offset6">
+        <input type="checkbox" ng-model="item.done">
+        <button class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
+      </div>
       </li>
-<!--
-      <li class="row-fluid">
-        <div class="completed span6">estudiar fisica</div>
-        <div class="offset6">
-          <button class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
-        </div>
-      </li>
-
-      <li class="row-fluid">
-        <div class="completed span6">hacer ejercicio</div>
-        <div class="offset6">
-          <button class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
-        </div>
-      </li>
--->
     </ul>
   </div>
-
-</div>

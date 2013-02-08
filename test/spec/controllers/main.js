@@ -45,6 +45,20 @@ describe('Controller: MainCtrl', function() {
       expect(scope.items[0].done).toBe(false);
     });
 
+    it('should not add an item that has an empty text', function() {
+      scope.newText = '';
+      scope.items = [];
+      scope.add();
+      expect(scope.items.length).toBe(0);
+    });
+
+    it('should have an empty newText field after a call to add', function () {
+      scope.newText = 'a task';
+      scope.items = [];
+      scope.add();
+      expect(scope.newText).toEqual('');;
+    });
+
   });
 
 });
