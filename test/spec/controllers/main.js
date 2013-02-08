@@ -16,7 +16,35 @@ describe('Controller: MainCtrl', function() {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function() {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should have an items list', function() {
+    expect(scope.items).toBeDefined();
   });
+
+  // Add function
+  describe('add', function() {
+
+    it('should be defined', function() {
+      expect(scope.add).toBeDefined();
+    });
+
+    it('should be a function', function() {
+      expect(typeof scope.add === 'function').toBe(true);
+    });
+
+    it('should add an item to the items list', function() {
+      scope.newText = 'Fake item';
+      scope.items = [];
+      scope.add();
+      expect(scope.items[0].text).toEqual('Fake item');
+    });
+
+    it('should add an item and mark it as not done', function() {
+      scope.newText = 'Fake item';
+      scope.items = [];
+      scope.add();
+      expect(scope.items[0].done).toBe(false);
+    });
+
+  });
+
 });
