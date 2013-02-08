@@ -9,23 +9,23 @@
   <div class="row-fluid">
     <form>
       <div id="add-input" class="input-append">
-        <input type="text" class="span8">
-        <button class="btn btn-primary" type="button"><i class="icon-plus"></i></button>
+        <input type="text" ng-model="newText" class="span8">
+        <button ng-click="add()" class="btn btn-primary" type="button"><i class="icon-plus"></i></button>
       </div>
     </form>
   </div>
 
   <!-- Items list -->
   <div id="todo-list" class="row-fluid">
-    <ul class="unstyled">
+    <ul class="items unstyled">
 
-      <li class="row-fluid">
-        <div class="span6">lavar auto</div>
+      <li ng-repeat="item in items" class="row-fluid">
+        <div class="span6">{{item.text}}</div>
         <div class="offset6">
           <button class="btn btn-mini btn-success" href="#"><i class="icon-ok"></i></button>
         </div>
       </li>
-
+<!--
       <li class="row-fluid">
         <div class="completed span6">estudiar fisica</div>
         <div class="offset6">
@@ -39,7 +39,7 @@
           <button class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
         </div>
       </li>
-
+-->
     </ul>
   </div>
 

@@ -174,4 +174,13 @@ module.exports = function( grunt ) {
       done(err);
     });
   });
+      
+  // Alias the `test` task to run `testacular` instead
+  grunt.registerTask('e2e-test', 'run the testacular test driver for e2e testing', function () {
+    var done = this.async();
+    require('child_process').exec('testacular start testacular-e2e.conf.js --single-run', function (err, stdout) {
+      grunt.log.write(stdout);
+      done(err);
+    });
+  });
 };
