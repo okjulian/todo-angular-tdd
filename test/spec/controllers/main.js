@@ -61,4 +61,25 @@ describe('Controller: MainCtrl', function() {
 
   });
 
+  describe('remove', function () {
+
+    it('should be defined', function() {
+      expect(scope.remove).toBeDefined();
+    });
+
+    it('should be a function', function() {
+      expect(typeof scope.remove === 'function').toBe(true);
+    });
+
+    it('should remove a specific item from the items list', function() {
+      scope.item = {text: 'An item', done: true};
+      scope.items = [];
+      scope.items.push(scope.item);
+      expect(scope.items.length).toBe(1);
+      scope.remove(scope.item);
+      expect(scope.items.length).toBe(0);
+    });
+
+  });
+
 });

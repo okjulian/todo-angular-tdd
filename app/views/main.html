@@ -20,11 +20,11 @@
     <ul class="items unstyled">
 
       <li ng-repeat="item in items" class="row-fluid">
-      <div class="span6 completed-{{item.done}}">{{item.text}}</div>
-      <div class="offset6">
-        <input type="checkbox" ng-model="item.done">
-        <button class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
-      </div>
+        <div class="span6 completed-{{item.done}}">{{item.text}}</div>
+        <div class="offset6">
+          <input type="checkbox" ng-model="item.done">
+          <button ng-click="remove(item)" class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
+        </div>
       </li>
     </ul>
   </div>

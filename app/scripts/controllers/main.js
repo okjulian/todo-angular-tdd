@@ -11,7 +11,9 @@ todoApp.controller('MainCtrl', function($scope) {
     };
   };
 
-  $scope.complete = function(item) {
-    item.done = true;
+  $scope.remove = function(item) {
+    var index = $scope.items.indexOf(item);
+    $scope.items.splice(index, 1);
   };
+
 });

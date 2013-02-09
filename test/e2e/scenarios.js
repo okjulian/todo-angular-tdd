@@ -24,5 +24,13 @@ describe('todoApp', function () {
       expect(element('.items li div').attr('class')).toBe('span6 completed-true');
     });
 
+    it('should remove an item when user clicks remove button', function () {
+      input('newText').enter('practice tdd');
+      element('.input-append button').click();
+      expect(repeater('.items li').count()).toBe(1);
+      element('.items li button').click();
+      expect(repeater('.items li').count()).toBe(0);
+    });
+
   });
 });
