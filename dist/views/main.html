@@ -1,0 +1,30 @@
+<div class="hero-unit">
+
+  <!-- Logo -->
+  <div class="row-fluid">
+    <h1 id="logo">TODO</h1>
+  </div>
+
+  <!-- Add item form -->
+  <div class="row-fluid">
+    <form name="addForm">
+      <div id="add-input" class="input-append">
+        <input name="input" type="text" ng-model="newText" class="span8">
+        <button ng-click="add()" class="btn btn-primary" type="button"><i class="icon-plus"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Items list -->
+  <div id="todo-list" class="row-fluid">
+    <ul class="items unstyled">
+
+      <li ng-repeat="item in items" class="row-fluid">
+        <div class="span6 completed-{{item.done}}">{{item.text}}</div>
+        <div class="offset6">
+          <input type="checkbox" ng-model="item.done">
+          <button ng-click="remove(item)" class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
+        </div>
+      </li>
+    </ul>
+  </div>
