@@ -1,16 +1,6 @@
-# Error: Unknown provider: aProvider <- a
-    at http://localhost:3501/scripts/vendor/d10639ae.angular.js:2627
-    at getService (http://localhost:3501/scripts/vendor/d10639ae.angular.js:2755)
-    at http://localhost:3501/scripts/vendor/d10639ae.angular.js:2632
-    at getService (http://localhost:3501/scripts/vendor/d10639ae.angular.js:2755)
-    at invoke (http://localhost:3501/scripts/vendor/d10639ae.angular.js:2773)
-    at instantiate (http://localhost:3501/scripts/vendor/d10639ae.angular.js:2805)
-    at http://localhost:3501/scripts/vendor/d10639ae.angular.js:4620
-    at update (http://localhost:3501/scripts/vendor/d10639ae.angular.js:13692)
-    at http://localhost:3501/scripts/vendor/d10639ae.angular.js:8002 (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Sat Feb 09 2013 20:20:52 GMT-0300 (ART)
+# Time: Sat Feb 09 2013 20:47:33 GMT-0300 (ART)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/#/
@@ -34,7 +24,7 @@ CACHE:
 http://localhost:3501/img/glyphicons-halflings-white.png
 http://localhost:3501/img/glyphicons-halflings.png
 http://www.google-analytics.com/ga.js
-scripts/ad63f561.scripts.js
+scripts/1b7eabe5.scripts.js
 scripts/vendor/d10639ae.angular.js
 styles/0b9b6b1f.bootstrap.css
 styles/d5ba637c.main.css
