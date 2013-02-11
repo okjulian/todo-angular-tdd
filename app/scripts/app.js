@@ -1,3 +1,5 @@
+/*jshint globalstrict:true */
+/*global angular:true */
 'use strict';
 
 var todoApp = angular.module('todoApp', [])

@@ -1,3 +1,4 @@
+/*global require:true */
 module.exports = function( grunt ) {
   'use strict';
   //
@@ -74,6 +75,7 @@ module.exports = function( grunt ) {
       files: [
         'Gruntfile.js',
         'app/scripts/**/*.js',
+        '!app/scripts/vendor/*.js',
         'spec/**/*.js'
       ]
     },
