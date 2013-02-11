@@ -1,3 +1,5 @@
+/*jshint globalstrict: true*/
+/*global todoApp:true */
 'use strict';
 
 todoApp.controller('MainCtrl', ['$scope', function($scope) {
@@ -8,7 +10,7 @@ todoApp.controller('MainCtrl', ['$scope', function($scope) {
     if ($scope.newText !== undefined && $scope.newText !== '') {
       $scope.items.push({text: $scope.newText, done: false});
       $scope.newText = '';
-    };
+    }
   };
 
   $scope.remove = function(item) {
