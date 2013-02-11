@@ -16,4 +16,8 @@ todoApp.controller('MainCtrl', ['$scope', function($scope) {
     $scope.items.splice(index, 1);
   };
 
+  $scope.toggleDone = function(item) {
+    item.done = !item.done;
+  };
+
 }]);

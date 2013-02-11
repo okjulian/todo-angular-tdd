@@ -82,4 +82,28 @@ describe('Controller: MainCtrl', function() {
 
   });
 
+  describe('toggleDone', function () {
+ 
+    it('should be defined', function() {
+      expect(scope.toggleDone).toBeDefined();
+    });
+
+    it('should be a function', function() {
+      expect(typeof scope.toggleDone === 'function').toBe(true);
+    });
+
+    it('should make a done item be not done', function() {
+      scope.item = {text: 'A task', done: true};
+      scope.toggleDone(scope.item);
+      expect(scope.item.done).toBeFalsy();
+    });
+
+    it('should make a not done item be done', function() {
+      scope.item = {text: 'A task', done: false};
+      scope.toggleDone(scope.item); 
+      expect(scope.item.done).toBeTruthy();
+    });
+
+  });
+
 });

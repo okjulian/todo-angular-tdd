@@ -22,7 +22,7 @@
       <li ng-repeat="item in items" class="row-fluid">
         <div class="span6 completed-{{item.done}}">{{item.text}}</div>
         <div class="offset6">
-          <input type="checkbox" ng-model="item.done">
+          <button ng-click="toggleDone(item)" class="btn btn-mini btn-success" href="#"><i class="icon-completed-{{item.done}}"></i></button>
           <button ng-click="remove(item)" class="btn btn-mini btn-danger" href="#"><i class="icon-trash"></i></button>
         </div>
       </li>

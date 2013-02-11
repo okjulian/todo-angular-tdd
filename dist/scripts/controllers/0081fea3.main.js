@@ -1,6 +1,6 @@
 'use strict';
 
-todoApp.controller('MainCtrl', function($scope) {
+todoApp.controller('MainCtrl', ['$scope', function($scope) {
 
   $scope.items = [];
 
@@ -16,4 +16,8 @@ todoApp.controller('MainCtrl', function($scope) {
     $scope.items.splice(index, 1);
   };
 
-});
+  $scope.toggleDone = function(item) {
+    item.done = !item.done;
+  };
+
+}]);

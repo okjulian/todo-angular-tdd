@@ -62,4 +62,11 @@ browsers = ['PhantomJS'];
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
-singleRun = false;
+//singleRun = false;
+
+// Jenkins Configuration
+singleRun = true;
+reporters = ['dots', 'junit'];
+junitReporter = {
+outputFile: 'test-results.xml'
+};
